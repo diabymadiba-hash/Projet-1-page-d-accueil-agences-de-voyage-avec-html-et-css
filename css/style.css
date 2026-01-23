@@ -19,7 +19,7 @@ body {
     display: flex;
     justify-content: center;
     font-family: "raleway", sans-serif;
-    
+
 }
 
 .main-container {
@@ -48,8 +48,8 @@ a {
 
 .card img {
     object-fit: cover;
-                        width: 100%; 
-                        height: 120px;
+    width: 100%;
+    height: 120px;
 }
 
 .card-title {
@@ -141,7 +141,7 @@ a {
 
     .hebergements {
         width: 100%;
-    
+
     }
 
     .populaires {
@@ -180,39 +180,43 @@ a {
     justify-content: flex-end;
 }
 
-.barre-de-navigation a:hover{
-    color:var(--main-color);
+.barre-de-navigation a:hover {
+    color: var(--main-color);
 }
 
-#hebergement, #activite {
-    margin-bottom: 20px; /* espace entre le titre et les cartes */
+#hebergement,
+#activite {
+    margin-bottom: 20px;
+    /* espace entre le titre et les cartes */
     margin-top: 20px;
 }
 
 
-.image-chambre-hotel img{
+.image-chambre-hotel img {
     border-radius: 10px;
-                    width: 100%;
-                    height: 120px;
-                    object-fit: cover;
-                    display: block;
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    display: block;
 }
 
-.image-chambre-hotel{ 
-    
-    display: grid; 
+.image-chambre-hotel {
+
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
-     gap: 20px;
+    gap: 20px;
 }
 
 
 
 .info-message {
-    color: #7a7a7a; /* gris du texte */
+    color: #7a7a7a;
+    /* gris du texte */
     font-size: 16px;
     display: flex;
     align-items: center;
-    gap: 8px; /* espace entre l’icône et le texte */
+    gap: 8px;
+    /* espace entre l’icône et le texte */
 }
 
 .info-message {
@@ -223,10 +227,14 @@ a {
 }
 
 .info-icon {
-    background-color: white;      /* fond blanc */
-    color: var(--main-color);     /* symbole bleu */
-    border: 2px solid #ffffff;      /* bordure blanche */           
-   border-radius: 50%;          /* forme circulaire */
+    background-color: white;
+    /* fond blanc */
+    color: var(--main-color);
+    /* symbole bleu */
+    border: 2px solid #ffffff;
+    /* bordure blanche */
+    border-radius: 50%;
+    /* forme circulaire */
     width: 22px;
     height: 22px;
     display: flex;
@@ -235,16 +243,30 @@ a {
     font-size: 14px;
 }
 
-.activite-marseille {
-    display: flex;
-    gap: 5px;              /* espace entre les cartes */  
-    flex-wrap: nowrap;   
-    justify-content: center;
+
+
+
+.activite h3 {
+    margin: 10px 0;
+    padding: 18px;
+    color: #333;
 }
 
 
+.activite-marseille {
+    display: flex;
+    flex-wrap: nowrap;
+    /* reste sur une seule ligne */
+    gap: 2px;
+    /* contrôle précis de l’écart */
+    justify-content: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
 .activite {
-    width: 340px;           /* largeur de chaque carte */
+    flex: 0 0 24%;
+    /* 4 cartes bien alignées */
     background-color: white;
     border-radius: 20px 20px 0 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -255,17 +277,115 @@ a {
 .activite img {
     width: 100%;
     height: 400px;
+    /* image bien grande */
     object-fit: cover;
+    /* remplissage sans déformation */
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .activite-marseille {
+        overflow-x: auto;
+    }
+
+    .activite {
+        flex: 0 0 80%;
+    }
+}
+
+footer {
+    background-color: (#F2F2F2);
+    padding: 40px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /*aligne les titre en haut*/
+    gap: 40px;
+    /*space entre les collonnes*/
+}
+
+.footer-section {
+    width: 30%;
+    /*colonnes équilibrés*/
+}
+
+.footer-section h3 {
+    list-style: none;
+    padding: 0;
     margin: 0;
-   
+    margin-bottom: 15px;
 }
 
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-.activite h3 {
-    margin: 10px 0;
-    padding: 18px;
+.footer-section li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    text-decoration: none;
     color: #333;
+    font-size: 14px;
 }
 
+#footer {
+    background-color: #f2f2f2;
+    /* gris très clair */
+    padding: 40px 20px;
 
+}
 
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 420px;
+  height: 50px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* icône fond gris */
+.search-icon {
+  width: 50px;
+  height: 100%;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* icône */
+.search-icon i {
+  color: black;
+  font-size: 18px;
+}
+
+/* champ texte fond blanc */
+.search-input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 15px;
+  font-size: 16px;
+  background-color: white;
+}
+
+/* bouton bleu */
+.search-button {
+  height: 100%;
+  padding: 0 20px;
+  background-color: #0065FC;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
