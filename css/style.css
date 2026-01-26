@@ -202,6 +202,9 @@ header p {
 .hebergements {
     width: 65%;
 }
+.hebergements h2 {
+    margin-bottom: 25px;
+}
 
 .populaires {
     width: 32%;
@@ -257,6 +260,7 @@ header p {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    margin-bottom: 30px;
 }
 
 .image-chambre-hotel img {
