@@ -12,9 +12,6 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
@@ -27,17 +24,19 @@
     <div class="main-container">
         <header>
             <nav class="barre-de-navigation">
-                <a href="#hebergement">herbergement</a>
+                <a href="#hebergement">Hérbergements</a>
                 <a href="#activite">Activités</a>
             </nav>
-            <img src="images/logo/Booki.png">
+            <div class="logo">
+            <img src="images/logo/Booki.png" alt="Logo Booki">
+            </div>
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
             <p>En plein centre-ville ou en pleine nature</p>
             <div class="search-bar">
                 <div class="search-icon">
                     <i class="fa-solid fa-location-dot"></i>
                 </div>
-                <input type="text" class="search-input" value="Marseille,France">
+                <input type="text" class="search-input" value="Marseille,France" ariel-label="Rechercher une  ville">
                 <button class="search-button">Rechercher</button>
             </div>
         </header>
@@ -191,9 +190,8 @@
                                 </div>
                             </article>
                         </a>
+                    </div>
                         <h4>Afficher plus</h4>
-
-
                 </section>
                 <section class="populaires">
                     <div class="populaires-title">
@@ -247,6 +245,7 @@
                             <article class="card">
                                 <img src="./images/hebergement/febrian-zakaria2.jpg"
                                     alt="Image de la chambre d'hôtel montrant un lit">
+
                                 <div class="card-content">
                                     <div class="card-txt">
                                         <h3 class="card-title">Hôtel Bleu et Blanc</h3>
@@ -270,19 +269,19 @@
         <h3 id="activite" class="section-title">Activité à Marseille</h3>
         <div class="activite-marseille">
             <figure class="activite">
-                <a href="#"><img src="images/activites/reno-laithienne.jpg"></a>
+                <a href="#"><img src="images/activites/reno-laithienne.jpg" alt="Vieux-Port de Marseille"></a>
                 <h3>Vieux-Port</h3>
             </figure>
             <figure class="activite">
-                <a href="#"><img src="images/activites/paul-hermann.jpg"></a>
+                <a href="#"><img src="images/activites/paul-hermann.jpg" alt="Ford de Pornègues"></a>
                 <h3>Ford de Pornègues</h3>
             </figure>
             <figure class="activite">
-                <a href="#"><img src="images/activites/kilyan-sockalingum.jpg"></a>
+                <a href="#"><img src="images/activites/kilyan-sockalingum.jpg" alt="Parc national des calanques"></a>
                 <h3>Parc national des calanques</h3>
             </figure>
             <figure class="activite">
-                <a href="#"><img src="images/activites/florian-wehde.jpg"></a>
+                <a href="#"><img src="images/activites/florian-wehde.jpg" alt="Notre-Dame-de-la-Garde"></a>
                 <h3>Notre-Dame-de-la-Garde</h3>
             </figure>
 
