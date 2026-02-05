@@ -428,13 +428,6 @@ header {
 
 }
 
-#activite.section-title {
-
-    text-align: left;
-    margin-left: 0;
-    padding-left: 0;
-    margin-bottom: 11px;
-}
 
 
 
@@ -443,17 +436,17 @@ header {
 
 footer {
     background-color: #F2F2F2;
-    padding: 40px 20px;
+
     display: flex;
     justify-content: space-between;
     gap: 40px;
-
+    padding: 10px 20px;
+    /* ← garde les marges internes */
     max-width: 1400px;
     /* ← même largeur que activités et populaires */
     margin: 0 auto;
     /* ← centre le footer */
-    padding: 10px 20px;
-    /* ← garde les marges internes */
+
 }
 
 .footer-section {
