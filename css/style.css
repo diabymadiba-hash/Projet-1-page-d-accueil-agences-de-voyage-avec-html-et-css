@@ -1117,16 +1117,12 @@ footer {
     }
 
     /* ================= POPULAIRES ================= */
-
-    .populaires {
-        width: 100vw;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        background-color: var(--main-bg-color);
-        padding: 22px 12px;
+    .hebergements-and-populaires section {
         border-radius: 0;
-        /* ← important */
+        padding: 22px 12px;
+        /* comme la maquette mobile */
     }
+
 
 
     .populaires-title h2 {
@@ -1139,25 +1135,22 @@ footer {
         gap: 12px;
     }
 
+
     .populaires-cards .card {
-        display: flex;
-        height: 110px;
-        padding: 6px;
-        gap: 6px;
-        background-color: white;
-        /* ← indispensable */
-        border-radius: 16px;
-        /* ← arrondi visible */
-        overflow: hidden;
-        /* ← clé pour que l’image ne dépasse pas */
+        transform: scale(1.03);
+        /* léger zoom */
+        transform-origin: center;
+        margin-left: 4px;
+        margin-right: 4px;
     }
 
-  .populaires-cards img {
-    width: 110px;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 16px 0 0 16px;
-}
+
+    .populaires-cards img {
+        width: 32%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 16px 0 0 16px;
+    }
 
 
     .populaires-cards .card-content {
@@ -1168,23 +1161,49 @@ footer {
     }
 
     .populaires-cards .card-title {
-        font-size: 0.9em;
-        line-height: 1.15;
+        font-size: 1.1em;
+        line-height: 1.2;
         margin: 0;
     }
 
     .populaires-cards .card-subtitle {
-        font-size: 0.8em;
+        font-size: 1em;
         white-space: nowrap;
         margin: 0;
+        margin-top: 5px;
+    }
+
+    .card-subtitle .euro {
+        font-weight: 700;
+    }
+
+    .populaires-title .section-title {
+        font-size: 1.3em;
+    }
+
+    .card.card-content {
+        font-size: 1.2em;
+    }
+
+
+    .card-rating i {
+        font-size: 0.90em;
+        /* augmente légèrement */
     }
 
     /* ================= HÉBERGEMENTS ================= */
 
-    .hebergements {
-        background-color: white;
-        padding: 0 12px;
+
+    .hebergements .card {
+        transform: scale(1.03);
+        /* léger zoom */
+        transform-origin: center;
     }
+
+    .hebergements-and-populaires .hebergements {
+        background-color: white !important;
+    }
+
 
     .image-chambre-hotel {
         display: flex;
@@ -1205,20 +1224,40 @@ footer {
     }
 
     .image-chambre-hotel .card-title {
-        font-size: 0.95em;
-        margin: 4px 0 2px;
+        font-size: 1.1em;
         line-height: 1.2;
     }
 
     .image-chambre-hotel .card-subtitle {
-        font-size: 0.85em;
-        margin: 0;
+        font-size: 1.1em;
+    }
+
+    .image-chambre-hotel .card-rating {
+        margin-top: 6px;
+    }
+
+    .hebergements h4 {
+        font-size: 1.1em;
+
     }
 
     /* ================= ACTIVITÉS ================= */
 
+    .activite-marseille .activite {
+        width: 95%;
+        /* laisse de l’air sur les côtés */
+        margin-left: auto;
+        /* centre horizontalement */
+        margin-right: auto;
+        transform: scale(1.04);
+        transform-origin: center;
+        height: auto;
+    }
+
+
+
     #activite.section-title {
-        font-size: 18px;
+        font-size: 1.4em;
         margin: 26px auto 14px;
         padding: 0 12px;
     }
@@ -1226,34 +1265,78 @@ footer {
     .activite-marseille {
         display: flex;
         flex-direction: column;
-        gap: 18px;
+        gap: 5px;
         padding: 0 12px;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
     }
 
     .activite {
-        width: 100%;
+        background-color: white;
         border-radius: 16px;
         overflow: hidden;
+        padding-bottom: 8px;
+        /* espace sous le h3 */
+
     }
 
-    .activite img {
+
+    .activite-marseille .activite img {
+        width: 100%;
         height: 130px;
         object-fit: cover;
+        border-radius: 16px 16px 0 0;
     }
 
+
     .activite h3 {
-        padding: 10px 12px;
-        font-size: 14px;
+        padding: 13px 12px;
+        /* plus fin, plus propre */
+        font-size: 1em;
         margin: 0;
+        text-align: left;
+
     }
 
     /* ================= FOOTER ================= */
-
     footer {
+        width: 100%;
+        background-color: var(--main-bg-color);
+        padding: 30px 20px;
+      
+        
+       
+    }
+
+    footer .footer-section {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+
+    .footer-section h3 {
+        font-size: 1.2em !important;
+        font-weight: 500;
+    }
+
+    #footer a {
+        font-size: 1.1em !important;
+        line-height: 1.4 !important;
+        margin-bottom: 6px !important;
+        display: block;
+        color: #000;
+    }
+
+    #footer {
         display: flex;
         flex-direction: column;
-        gap: 18px;
-        padding: 20px 12px;
+        gap: 30px;
+        margin: 0 !important;
+        margin-bottom: 9px; /* espace entre les lignes */
+        line-height: 1.6;/* hauteur de ligne agréable */
+        
+
+       
     }
+
+
 }
