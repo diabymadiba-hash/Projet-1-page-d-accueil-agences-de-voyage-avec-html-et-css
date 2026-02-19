@@ -303,33 +303,28 @@ header {
 .image-chambre-hotel {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 30px;
+    gap: 30px;
     /* espace vertical proche maquette */
 
 }
 
 
 .image-chambre-hotel a {
-    width: 31%;
-    /* compromis visuel idéal */
-    text-decoration: none;
+    flex: 0 0 calc((100% - 60px) / 3);
+    max-width: calc((100% - 60px) / 3);
 }
-
 
 /********************************/
 /* CARTE */
 /********************************/
 
 .image-chambre-hotel .card {
-    width: 100%;
+    height: 215px;
     background-color: #ffffff;
     border-radius: 20px;
-    overflow: hidden;
     padding: 6px;
     display: flex;
     flex-direction: column;
-    min-height: 230px;
 }
 
 /********************************/
@@ -338,9 +333,12 @@ header {
 
 .image-chambre-hotel .card img {
     width: 100%;
-    height: 130px;
+    height: 118px;
+    /* FIXE */
     object-fit: cover;
-    border-radius: 16px 16px 0 0;
+    flex-shrink: 0;
+    /* 🔥 clé */
+    border-radius: 20px 20px 0 0;
 }
 
 /********************************/
@@ -348,42 +346,49 @@ header {
 /********************************/
 
 .image-chambre-hotel .card-content {
-    width: 100%;
-    padding: 8px 10px;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    /* espace propre entre card-txt et étoiles */
+    gap: 8px;
 }
 
 /* TITRE */
 .image-chambre-hotel .card-title {
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: 700;
-    margin: 0;
     line-height: 1.3;
-    white-space: normal;
+    margin: 0;
 
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* 🔥 JAMAIS plus de 2 lignes */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
+
 
 /* PRIX */
 .image-chambre-hotel .card-subtitle {
-    font-size: 1.1em;
-    margin: 0;
+    font-size: clamp(0.85rem, 1vw, 1.1rem);
     line-height: 1.3;
-    white-space: normal;
+    margin: 0;
 
+    white-space: nowrap;
 
+    text-overflow: ellipsis;
 }
+
 
 /* ÉTOILES */
 .image-chambre-hotel .card-rating {
+    margin-top: auto;
     display: flex;
     gap: 2px;
-    font-size: 1.4em;
-    /* 🔥 plus fin, comme la maquette */
-    margin-top: 6px;
+
+    font-size: clamp(1rem, 1.1vw, 1.4rem);
 }
+
+
 
 .hebergements h4 {
     margin: 9px 0 0;
@@ -392,17 +397,11 @@ header {
     font-weight: 700;
     text-align: left;
     /* aligné comme les cartes */
-    margin-top: 22px;
+    margin-top: 45px;
 
 }
 
-.card-title,
-.card-subtitle {
-    white-space: normal;
-    /* texte 100% visible */
-    margin: 0;
-    line-height: 1.3;
-}
+
 
 .card-txt {
     display: flex;
@@ -496,8 +495,8 @@ header {
 
 /* CONTENU */
 .card-content {
-    width: 67%;
-    ;
+    /*width: 67%;*/
+
     padding: 10px 12px;
     display: flex;
     flex-direction: column;
@@ -762,18 +761,22 @@ footer {
     /* ========================= */
 
     .activite-marseille {
-        flex-wrap: wrap;
         gap: 20px;
-        padding-left: 0;
+        /* 🔽 réduit légèrement */
+        padding: 0 29px;
+        /* 🔥 espace latéral maîtrisé */
     }
 
     .activite {
-        max-width: 48%;
-        /* 2 colonnes */
+        flex: 1 1 0;
+        /* inchangé */
+        max-width: 25%;
+        /* 4 cartes toujours */
     }
 
     .activite img {
-        height: 250px;
+        height: 209px;
+        /* un peu plus compact */
     }
 
 
@@ -795,42 +798,234 @@ footer {
 
 
 
-/* MOBILE ≤ 767px */
-
 @media (max-width: 767px) {
 
-    .populaires {
+    /* GLOBAL */
+
+
+    * {
+        max-width: 100% !important;
+    }
+
+   
+
+
+
+
+    
+
+   
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .main-container {
+        padding: 0 16px;
+    }
+
+    section {
+        border-radius: 0;
+    }
+
+    /* HEADER */
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0 0;
+    }
+
+    .logo {
+        width: 70px;
+        margin-bottom: 20px;
+    }
+
+    /* MENU */
+    .menu {
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        display: flex;
+        border-bottom: 2px solid #F2F2F2;
+    }
+
+    .menu-element {
+        flex: 1;
+        text-align: center;
+        position: relative;
+    }
+
+    /* TITRE + SOUS-TITRE */
+    .form-filter h1 {
         width: 100%;
-        margin-top: 20px;
+        padding: 0 14px;
+        /* 🔥 marge sur les côtés */
+        text-align: left;
+        font-size: 1.6rem;
+        line-height: 1.3;
+        margin-top: 12px;
+        margin-bottom: 6px;
+        white-space: normal;
+        /* 🔥 2 lignes */
+    }
+
+    /* SOUS-TITRE */
+    .form-filter p {
+        width: 100%;
+        padding: 0 14px;
+        /* 🔥 marge sur les côtés */
+        text-align: left;
+        font-size: 1.1rem;
+        white-space: nowrap;
+        /* 🔥 1 ligne */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 18px;
+        margin-top: 10px;
+    }
+
+    /* BARRE DE RECHERCHE */
+    .search-bar {
+        width: 100%;
+    }
+
+    .search-input {
+        width: 100%;
+        text-align: center;
+    }
+
+    .search-button span {
+        display: none;
+    }
+
+    .search-button i {
+        display: block;
+    }
+
+    /* FILTRES */
+    .filters {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .filters-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .filter {
+        flex: 1 1 calc(50% - 12px);
+        justify-content: center;
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    /* INFO */
+    .info {
+        white-space: nowrap;
+        font-size: 14px;
+    }
+
+    /* ========================= */
+    /* POPULAIRES — 100% LARGEUR */
+    /* ========================= */
+
+    /* Inversion de l'ordre des sections */
+    .hebergements-and-populaires {
+        display: flex;
+        flex-direction: column-reverse;
+        /* 🔥 Les populaires passent en premier */
+        gap: 0;
+        width: 100%;
+    }
+
+    .populaires {
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        border-radius: 0;
+        padding: 20px;
     }
 
     .populaires-cards {
+        display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 18px;
     }
 
     .populaires-cards .card {
-        height: 160px;
-        /* hauteur plus compacte */
-        flex-direction: row;
-        padding: 6px;
+        width: 100%;
+        height: 140px;
+        border-radius: 15px;
     }
 
-    .populaires-cards .card img {
-        width: 40%;
-        height: 100%;
+    /* ========================= */
+    /* HÉBERGEMENTS — 100% LARGEUR */
+    /* ========================= */
+
+    .hebergements {
+        background-color: transparent;
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    .image-chambre-hotel {
+        flex-direction: column;
+        gap: 18px;
+        width: 100%;
+    }
+
+    .image-chambre-hotel a {
+        width: 100%;
+        max-width: 100%;
+        flex: none;
+    }
+
+    .image-chambre-hotel .card {
+        width: 100%;
+        height: auto;
+    }
+
+    .image-chambre-hotel .card img {
+        height: 140px;
+    }
+
+    /* ========================= */
+    /* ACTIVITÉS — 100% LARGEUR */
+    /* ========================= */
+
+    .activite-marseille {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 0;
+        /* 🔥 enlève le décalage */
+        width: 100%;
+    }
+
+    .activite {
+        width: 100%;
+        /* 🔥 pleine largeur */
+        max-width: 100%;
+        /* 🔥 supprime le 23% */
+        flex: none;
+        /* 🔥 empêche le flex desktop */
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    .activite img {
+        width: 100%;
+        height: 140px;
+        /* 🔥 taille mobile */
         object-fit: cover;
     }
 
-    .populaires-cards .card-content {
-        width: 60%;
-        padding: 10px;
-    }
-
-    .populaires-cards .card-title,
-    .populaires-cards .card-subtitle {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+    /* FOOTER */
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 20px;
     }
 }
