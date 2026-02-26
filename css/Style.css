@@ -388,7 +388,7 @@ header {
     display: flex;
     gap: 2px;
 
-    font-size: clamp(1rem, 1.1vw, 1.4rem);
+    font: size 1.1em;;
 }
 
 
@@ -497,8 +497,20 @@ header {
 }
 
 /* CONTENU */
+
+
+
+.card-content-pop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 12px;
+    width: 65%;
+    word-wrap: break-word;
+}
+
 .card-content {
-    /*width: 67%;*/
+    width: 100%;
 
     padding: 10px 12px;
     display: flex;
@@ -526,7 +538,7 @@ header {
 .card-rating {
     display: flex;
     gap: 4px;
-    font-size: 14px;
+    font-size: 1em;
 }
 
 .populaires-bottom-spacer {
@@ -997,7 +1009,7 @@ footer {
     .hebergements {
         background-color: transparent;
         padding: 20px 0;
-      width: 100vw;
+        width: 100vw;
         margin-left: calc(50% - 50vw);
     }
 
@@ -1005,6 +1017,7 @@ footer {
         font-size: 1.3em;
         /* aligné avec les cartes */
     }
+
     .image-chambre-hotel {
         flex-direction: column;
         gap: 18px;
