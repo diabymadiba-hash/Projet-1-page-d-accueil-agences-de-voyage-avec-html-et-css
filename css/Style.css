@@ -36,10 +36,10 @@ figure {
 .main-container {
     /*centre le contenue*/
 
-    max-width: 1440px;
-    min-width: 320px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 1440px;/* largeur max de la maquette */
+    min-width: 320px;/* largeur mobile minimale */
+    margin: 0 auto;/* centre horizontalement */
+    padding: 0 20px;/* marges latérales pour éviter que le contenu touche les bords sur mobile */
 
 }
 
@@ -64,11 +64,12 @@ ul {
 header {
     display: flex;
     /* flexbox pour alignement horizontal */
-    justify-content: space-between;
+    justify-content: space-between;/* espace entre logo et menu */
     align-items: center;
     /* centré verticalement */
-    padding: 20px 0;
+    padding:  0 0 15px;/* marges verticales pour espacer du contenu */
 }
+
 
 .logo {
     width: 61px;
@@ -97,7 +98,7 @@ header {
     /* centre horizontalement */
     align-items: center;
     /* centre verticalement */
-    padding: 15px 0;
+    padding: 10px 0;
     /* padding vertical
     /* plus proche de la maquette */
     color: #333;
@@ -110,7 +111,7 @@ header {
 .menu-element::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -15px;
     left: 0;
     width: 0;
     height: 2px;
@@ -125,6 +126,8 @@ header {
 .menu-element:hover a {
     color: var(--main-color);
 }
+
+
 
 /************** FORMULAIRE + FILTRES **************/
 
@@ -147,7 +150,7 @@ header {
 
 .search-bar {
     display: flex;
-    align-items: center;
+    align-items: center;/* centre verticalement */
     height: 49px;
     /* hauteur exacte maquette */
     border-radius: 15px;
@@ -220,7 +223,7 @@ header {
     display: flex;
     gap: 15px;
     align-items: center;
-    margin-top: 22px;
+    margin-top: 22px;/* espace propre entre la barre de recherche et les filtres */
 }
 
 .filters p {
@@ -344,12 +347,12 @@ header {
 /********************************/
 
 .image-chambre-hotel .card {
-    height: 215px;
+    height: 215px;/* hauteur fixe pour uniformité */
     background-color: #ffffff;
     border-radius: 20px;
     padding: 6px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;/* pour aligner l’image en haut et le texte en bas */
 }
 
 /********************************/
@@ -424,8 +427,8 @@ header {
     display: flex;
     gap: 2px;
 
-    font: size 1.1em;
-    ;
+    font-size:  1.1em;
+    
 }
 
 
@@ -481,7 +484,7 @@ header {
 /* TITRE */
 .populaires-title {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;/* titre à gauche, icône à droite */
     align-items: center;
 }
 
@@ -508,7 +511,7 @@ header {
 /* CARTE */
 .populaires-cards .card {
     display: flex;
-    flex-direction: row;
+    flex-direction: row;/* alignement horizontal image + texte */
     height: 161px;
     background: #fff;
     border-radius: 25px;
@@ -662,7 +665,7 @@ footer {
     padding: 40px 2vw;
     /* marges latérales responsives */
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     /* passe en colonne sur mobile */
     gap: 90px;
     /* espace entre colonnes */
@@ -677,7 +680,7 @@ footer {
 }
 
 /* Titres */
-.footer-section h3 {
+.footer-section h2 {
     margin: 0 0 18px;
     font-size: 16px;
     font-weight: 700;
@@ -709,7 +712,7 @@ footer {
     /* ========================= */
 
     header {
-        padding: 20px 0;
+       /* padding: 20px 0;*/
         justify-content: space-between;
     }
 
