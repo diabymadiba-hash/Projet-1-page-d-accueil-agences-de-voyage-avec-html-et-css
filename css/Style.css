@@ -638,7 +638,7 @@ header {
 }
 
 /* Titre */
-.activite h3 {
+.activite figcaption {
     margin: 0;
     padding: 16px 18px;
     font-size: 1.1rem;
